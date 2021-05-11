@@ -1,0 +1,11 @@
+#use Docker to run a Ruby application without Ruby installed on our system.
+   $ docker run ruby:2.7 ruby -e "puts :hello"
+#start an interactive Bash shell inside a container based on the familiar ruby:2.7 image:
+   $ docker run -i -t --rm -v ${PWD}: /usr/src/app ruby:2.7 bash
+#Create a ruby project
+  root@0c286e8bda42:/# cd /usr/src
+  root@0c286e8bda42:/# mkdir app
+  root@0c286e8bda42:/# cd app 
+#install the rails gem
+  root@0c286e8bda42:/usr/src/app# gem install rails
+  
