@@ -1,7 +1,7 @@
 FROM ruby:2.7 
 RUN apt-get update -yqq 
 RUN apt-get install -yqq --no-install-recommends nodejs 
-COPY myapp /usr/src/app/ 
+COPY app
 WORKDIR /usr/src/app 
 EXPOSE 3000
 RUN bundle install
