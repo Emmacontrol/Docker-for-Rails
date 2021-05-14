@@ -3,12 +3,7 @@ RUN apt-get update -yqq
 RUN apt-get install -yqq --no-install-recommends nodejs 
 COPY myapp /usr/src/app/ 
 WORKDIR /usr/src/app 
+EXPOSE 3000
 RUN bundle install
-
-#Build image
-$docker build -t railsapp .
-
-#Run rails server
-$ docker run -p 3000:3000 railsapp \ 
-bin/rails s -b 0.0.0.0
+CMD bin/rails s -b 0.0.0.
 
